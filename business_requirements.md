@@ -47,6 +47,7 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - ✅ Vector embedding-based memory and similarity search
 - ✅ Mood/emotion tracking with optional mental health support features
 - ✅ Emoji picker for quick emotional expression (😊😢😡😴😰🤔)
+- ✅ AI-generated insights and reflections on user's journal entries, goals, conversations, and activities
 - ✅ AI-generated insights and reflections on user's journey
 - ✅ Customizable interaction styles and conversation topics
 - ✅ Offline mode with sync support

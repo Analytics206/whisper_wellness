@@ -1,159 +1,154 @@
-# 🛠️ Technical Stack Documentation
+# 🛠️ WhisperWell Technical Stack
 
-## System Architecture Overview
+## System Architecture
 
-```
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│   Ingestion     │────▶│  Data Storage   │────▶│   Processing    │
-│   Service       │     │    Layer        │     │    Layer        │
-└─────────────────┘     └─────────────────┘     └─────────────────┘
-                                                         │
-                                                         ▼
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│      User       │◀────│   Knowledge     │◀────│   Vector        │
-│   Interface     │     │     Graph       │     │   Embeddings    │
-└─────────────────┘     └─────────────────┘     └─────────────────┘
-```
+WhisperWell is built on a modern, cloud-native architecture designed for scale, security, and reliability. The system is composed of microservices that can be independently scaled based on demand.
 
 ## Core Technologies
 
-### Infrastructure & Containerization
+### Frontend
+- **Framework**: React 18 with TypeScript
+- **State Management**: Redux Toolkit with RTK Query
+- **UI Components**: Material-UI (MUI) with custom theme
+- **Progressive Web App**: Service workers for offline support
+- **Mobile**: React Native for cross-platform mobile apps
+- **Real-time**: Socket.IO for live updates
 
+### Backend
+- **API Gateway**: Kong/NGINX
+- **Service Framework**: Node.js with NestJS
+- **Authentication**: Auth0 with JWT
+- **API**: GraphQL (Apollo Server) & REST
+- **WebSockets**: Socket.IO for real-time features
 
-### Messaging System
+### AI/ML Services
+- **Conversation Engine**: GPT-4 with fine-tuning
+- **Embedding Models**: Sentence Transformers (all-MiniLM-L6-v2)
+- **Vector Database**: Qdrant (GPU-accelerated)
+- **ML Framework**: PyTorch with CUDA
+- **Model Serving**: Triton Inference Server
 
+### Data Storage
+- **Primary Database**: MongoDB Atlas (sharded)
+  - User profiles
+  - Journal entries
+  - System configurations
+- **Vector Database**: Qdrant
+  - Conversation embeddings
+  - Semantic search indices
+- **Graph Database**: Neo4j Aura
+  - Relationship mapping
+  - Knowledge graph
+- **Cache**: Redis
+  - Session storage
+  - Rate limiting
+  - Real-time features
+
+### Infrastructure
+- **Containerization**: Docker + Kubernetes
+- **CI/CD**: GitHub Actions + ArgoCD
+- **Infrastructure as Code**: Terraform
+- **Service Mesh**: Linkerd
+- **API Gateway**: Kong
 
 ### Monitoring & Observability
-
-### Data Sources
-
-### Ingestion Layer
-
-### Data Storage Layer
-
-### Graph Representation
-
-
-### Vector Embeddings & Topic Modeling
-- **Hugging Face Transformers**: Machine learning models for text embeddings
-- **PyTorch with CUDA**: GPU-accelerated embeddings generation
-- **Top2Vec**: Topic modeling with BERT-based embeddings
-  - Memory-efficient batch processing
-  - Category and date filtering support
-  - MongoDB integration for topic storage
-- **BERTopic**: Topic modeling with BERT-based embeddings
-  - Memory-efficient batch processing
-  - Category and date filtering support
-  - MongoDB integration for topic storage
-- **Ollama**: Local LLM server for text analysis and embedding generation
-  - Deployment options:
-    - Local instance: Run directly on the host machine
-    - Docker container: Standard deployment within main pipeline
-    - External Docker: Standalone deployment on separate machine with model management
-- **Qdrant**: Vector database for similarity search
-  - Collections: paper_embeddings
-  - Storage of metadata with vectors
-  - Deployment options:
-    - Docker container: Standard deployment
-    - External Docker: Standalone deployment on separate machine
-    - WSL2 GPU-accelerated: Enhanced performance with CUDA support
-    - Standalone with GPU: Direct installation with CUDA support
-    - Remote WSL2 with GPU: Dedicated vector server on separate machine
-  - Vector optimization: Native GPU acceleration through Rust with CUDA
-  - Benchmarking tools for performance testing
-- **Embedding models**: Sentence transformers for semantic representation
-- **MongoDB Tracking**: Prevents duplicate PDF processing
-
-
-### Configuration & Utilities
-
-## API Integrations
-
-## Development Tools
-
-## Monitoring Architecture
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                  Monitoring Environment                  │
-│                                                          │
-│   ┌─────────┐     ┌──────────┐     ┌────────────┐       │
-│   │Prometheus│────▶│ Grafana  │     │  cAdvisor  │       │
-│   │          │     │          │     │            │       │
-│   └─────────┘     └──────────┘     └────────────┘       │
-│        │                               │                 │
-│        │          ┌──────────┐         │                 │
-│        └──────────│Node      │─────────┘                 │
-│                   │Exporter  │                           │
-│                   └──────────┘                           │
-│                        │                                 │
-└────────────────────────│─────────────────────────────────┘
-                         │
-                         ▼
-┌─────────────────────────────────────────────────────────┐
-│                   Docker Environment                     │
-│  (Application containers, databases, and services)       │
-└─────────────────────────────────────────────────────────┘
-```
+- **Metrics**: Prometheus + Grafana
+- **Logging**: ELK Stack (Elasticsearch, Logstash, Kibana)
+- **Tracing**: Jaeger
+- **Alerting**: Alertmanager + PagerDuty
+- **Synthetic Monitoring**: New Relic Synthetics
 
 ## Deployment Architecture
 
-The system supports four deployment architectures:
+### 1. Development Environment
+- Local development with Docker Compose
+- Minikube for local Kubernetes testing
+- Automated testing with GitHub Actions
 
-### 2. Standard Docker Deployment
+### 2. Staging Environment
+- Full production-like environment
+- Blue/green deployment testing
+- Performance testing with k6
 
+### 3. Production Environment
+- Multi-region deployment
+- Auto-scaling node groups
+- Database read replicas
+- Global CDN with Cloudflare
 
-### 3. Hybrid Deployment with GPU Acceleration
-
-### 4. Distributed Services Deployment
-```
-┌────────────────────────────────────────────┐     ┌────────────────────────────────────────────┐
-│          Machine 1 (Main Pipeline)         │     │          Machine 2 (MongoDB)               │
-│                                            │     │                                            │
-│ ┌─────────┐     ┌──────────┐     ┌──────┐ │     │ ┌──────────┐                               │
-│ │  app    │────▶│sync-neo4j│────▶│web-ui│ │     │ │ mongodb  │◀─────────────────────────────┤
-│ │         │     │          │     │      │ │     │ │          │                               │
-│ └─────────┘     └──────────┘     └──────┘ │     │ └──────────┘                               │
-└────────────────────────────────────────────┘     └────────────────────────────────────────────┘
-                       ▲
-                       │
-                       ▼
-┌────────────────────────────────────────────┐     ┌────────────────────────────────────────────┐
-│          Machine 3 (Neo4j)                 │     │          Machine 4 (Qdrant GPU)            │
-│                                            │     │                                            │
-│ ┌──────────┐                               │     │ ┌─────────┐                                │
-│ │  neo4j   │◀─────────────────────────────┤     │ │ qdrant  │◀─────────────────────────────┤
-│ │          │                               │     │ │ (GPU)   │                                │
-│ └──────────┘                               │     │ └─────────┘                                │
-└────────────────────────────────────────────┘     └────────────────────────────────────────────┘
-```
-
-## Database Schema
+## Data Model
 
 ### MongoDB Collections
-
-### Neo4j Graph Model
-
-
-### MongoDB Topic Collection
-
+- `users` - User profiles and authentication
+- `journal_entries` - Encrypted journal content
+- `goals` - User goals and progress
+- `conversations` - Chat history with AI
+- `analytics_events` - User interaction data
 
 ### Qdrant Collections
+- `conversation_embeddings` - Vector representations of conversations
+  - Dimension: 384 (all-MiniLM-L6-v2)
+  - Distance: Cosine
+  - Payload: conversation_id, user_id, timestamp, metadata
 
-- **wellness_summary**:
-  - Vector dimension: Model-dependent (768 default)
-  - Metadata: paper_id, title, category, published date, summary_length
-  - Distance metric: Cosine similarity
-  - Source: Paper summary/abstract from MongoDB
+### Neo4j Graph Model
+- Nodes: User, JournalEntry, Goal, Conversation, Tag, Emotion
+- Relationships: CREATED, TAGGED_WITH, RELATED_TO, EXPRESSES
 
-## Security Considerations
-- Local-first architecture minimizes external dependencies
-- Docker isolation for service components
-- No exposed credentials in code
-- Grafana access protected by authentication
+## Security Architecture
 
-## Scaling Considerations
-- Container-based architecture supports horizontal scaling
-- Database services can be scaled independently
-- Modular components allow selective enhancement
-- Monitoring stack provides visibility into resource usage for capacity planning
+### Data Protection
+- **Encryption at Rest**: AES-256
+- **Encryption in Transit**: TLS 1.3
+- **Key Management**: AWS KMS/HashiCorp Vault
+- **Data Masking**: PII redaction
+- **Audit Logging**: All data access logged
+
+### Access Control
+- Role-Based Access Control (RBAC)
+- Attribute-Based Access Control (ABAC)
+- Just-In-Time (JIT) provisioning
+- Multi-factor authentication (MFA)
+
+### Compliance
+- **GDPR/CCPA**: Data subject access requests
+- **HIPAA**: BAA with providers
+- **SOC 2 Type II**: Annual audits
+- **Penetration Testing**: Quarterly security audits
+
+## Performance & Scaling
+
+### Read Optimization
+- Database read replicas
+- Redis caching layer
+- CDN for static assets
+- Edge caching with Cloudflare
+
+### Write Optimization
+- Database sharding by user ID
+- Asynchronous processing for non-critical operations
+- Batch processing for analytics
+
+### AI/ML Scaling
+- Model quantization for inference optimization
+- Dynamic batching
+- GPU acceleration for embedding generation
+- Model versioning and A/B testing
+
+## Disaster Recovery
+- Multi-region deployment
+- Automated backups with point-in-time recovery
+- Chaos engineering testing
+- Incident response playbooks
+
+## Development Workflow
+- Git Flow branching strategy
+- Automated testing (unit, integration, E2E)
+- Code review requirements
+- Automated dependency updates with Dependabot
+
+## Monitoring & Alerting
+- Custom dashboards in Grafana
+- SLO-based alerting
+- Anomaly detection
+- Cost monitoring and optimization
