@@ -1,24 +1,25 @@
 # WhisperWell – Business Requirements Document (BRD)
 
 ## 1. Executive Summary
-WhisperWell is an AI-powered mental health companion designed as a Progressive Web App (PWA) for Phase 1, with native apps to follow. It offers encrypted lifelong data storage, personalized emotional support, and advanced AI-driven insights based on user interactions and journaling. WhisperWell uses vector embeddings to enable memory recall and similarity search over time, providing a truly long-term companion experience.
+WhisperWell is an AI-powered lifelong companion designed as a Progressive Web App (PWA) for Phase 1, with native apps to follow. It offers encrypted lifelong data storage, personalized interactions, and advanced AI-driven insights based on user conversations and experiences. While it includes mental health support as a key feature, WhisperWell serves as a comprehensive companion for all aspects of life. The platform uses vector embeddings to enable memory recall and contextual understanding over time, creating a truly personalized and evolving companion experience.
 
 ---
 
 ## 2. Business Objectives
-- Launch a secure, privacy-first AI mental health app.
-- Offer users a lifelong record of their mental wellness journey.
-- Utilize advanced AI to provide meaningful, empathetic companionship.
+- Launch a secure, privacy-first AI companion app with mental health support.
+- Offer users a lifelong digital companion that grows and evolves with them.
+- Utilize advanced AI to provide meaningful, empathetic interactions across all aspects of life.
 - Enable long-term memory and contextual understanding via vector embeddings.
-- Provide actionable insights and reflections from user data.
+- Provide personalized insights and reflections while respecting user privacy and autonomy.
 
 ---
 
 ## 3. Target Users
-- Adults seeking mental health support and emotional clarity.
-- Individuals interested in journaling and self-growth.
-- People looking for a consistent, non-judgmental AI companion.
-- Privacy-conscious users wanting lifetime secure data storage.
+- Individuals seeking a long-term AI companion for personal growth and support.
+- People interested in self-improvement, reflection, and personal development.
+- Those who value privacy and want a secure, personalized digital companion.
+- Users looking for both casual conversation and deeper, meaningful interactions.
+- People who appreciate having a consistent, non-judgmental presence in their daily lives.
 
 ---
 
@@ -26,13 +27,16 @@ WhisperWell is an AI-powered mental health companion designed as a Progressive W
 ### Core Features (Phase 1)
 - ✅ User registration and authentication (anonymous mode supported)
 - ✅ Secure, encrypted journaling with optional voice input and tags
-- ✅ Conversational AI companion trained for empathetic interaction
+- ✅ Conversational AI companion for natural, contextual interactions
 - ✅ Vector embedding-based memory and similarity search
-- ✅ Mood/emotion detection and visual trend tracking
-- ✅ AI-generated weekly/monthly summaries
-- ✅ Customizable and therapist-inspired prompt library
+- ✅ Mood/emotion tracking with optional mental health support features
+- ✅ Emoji picker for quick emotional expression (😊😢😡😴😰🤔)
+- ✅ AI-generated insights and reflections on user's journey
+- ✅ Customizable interaction styles and conversation topics
 - ✅ Offline mode with sync support
 - ✅ Full data export/delete control
+- ✅ Topic-based conversation memory and continuity
+- ✅ Personalized content and activity suggestions
 
 ---
 
@@ -64,15 +68,17 @@ WhisperWell is an AI-powered mental health companion designed as a Progressive W
 - Human-in-the-loop reviews for new data incorporation
 
 ### AI Capabilities
-- Natural conversation with sentiment awareness
-- Emotion/topic detection (joy, grief, anxiety, etc.)
-- Context retention using vector embeddings (via Qdrant)
-- Weekly summaries and mental health trend reports
+- Natural, flowing conversation with emotional intelligence
+- Contextual understanding and long-term memory
+- Emotion/topic awareness with appropriate response adaptation
+- Personal growth tracking and milestone recognition
+- Adaptive interaction style based on user preferences
 
 ### Guardrails
-- No pseudo-therapeutic diagnoses
-- Redirects critical mental health crises to emergency resources
-- Adaptive filtering of sensitive or triggering content
+- Clear boundaries regarding the AI's capabilities
+- Redirection to professional resources when appropriate
+- Adaptive content filtering based on user preferences
+- Transparent disclosure of AI limitations
 
 ---
 
@@ -115,7 +121,7 @@ WhisperWell is an AI-powered mental health companion designed as a Progressive W
 
 ---
 
-## 11. Mental Health Advisory Board
+## 11. Advisory Board
 ### Goals
 - Ensure clinical accuracy and ethical AI behavior
 - Guide the design of prompt sets and emotional models
@@ -136,6 +142,8 @@ WhisperWell is an AI-powered mental health companion designed as a Progressive W
 
 ## 12. Future Considerations
 - Native iOS and Android apps with full offline and sync support
-- AI plugin ecosystem for mindfulness, CBT, or journaling games
-- Integration with wearable data (e.g., Apple Health, Fitbit)
-- Private API for therapists or support groups (optional)
+- AI plugin ecosystem for extended functionality and personalization
+- Integration with wearable data (e.g., Apple Health, Fitbit, Garmin)
+- API for third-party integrations and custom experiences
+- Advanced personalization through continuous learning
+- Multi-modal interactions (voice, text, images)
