@@ -2,41 +2,28 @@
 
 ---
 
-## Version 0.1.0 (April 26, 2025)
+## Version 0.0.1 (May 23, 2025)
 
-### Major Features
+### Initial Project Setup
 
-#### Data Ingestion and Storage
-- **ArXiv API Integration** - Implemented paper ingestion from ArXiv Atom XML API
-- **MongoDB Storage** - Created document storage for paper metadata with appropriate indexing
-- **Neo4j Graph Database** - Established graph representation for papers, authors, and categories
-- **PDF Downloading** - Added functionality to download and organize research papers in PDF format
-- **Vector Embedding** - Implemented basic text vectorization using Hugging Face models
-- **Qdrant Integration** - Set up vector similarity search with Qdrant database
+#### Core Documentation
+- **Business Requirements** - Documented business objectives, success metrics, and stakeholder analysis
+- **Product Requirements** - Defined functional and non-functional requirements, user stories, and acceptance criteria
+- **Requirements Tracking** - Established system for tracking requirements status, ownership, and implementation progress
+- **System Design** - Created high-level architecture, data flow, and component interaction diagrams
+- **Tech Stack** - Documented technology choices, dependencies, and version requirements
 
-#### Docker Containerization
-- **Multi-Container Setup** - Built initial Docker Compose configuration for all services
-- **Volume Persistence** - Implemented persistent storage for MongoDB and Neo4j data
-- **Network Configuration** - Established internal container communication and port mapping
-- **Service Orchestration** - Created coordinated startup/shutdown of all system components
+#### Development Environment
+- **WSL2 Setup** - Configured Windows Subsystem for Linux 2 for development
+- **Python 3.11 Environment** - Set up virtual environment with required Python version
+- **Git Repository** - Initialized version control with .gitignore for Python and development environments
+- **Project Structure** - Established initial directory layout and module organization
 
-#### Web Interface
-- **Neo4j Visualization** - Created basic web interface for exploring the knowledge graph
-- **Browsing Interface** - Implemented paper browsing and navigation features
-- **Web UI Container** - Dockerized the web interface with appropriate connections to backend services
+#### Configuration
+- **Environment Management** - Added support for environment variables and configuration files
+- **Development Dependencies** - Set up development requirements and pre-commit hooks
+- **Documentation** - Created initial documentation structure and contribution guidelines
 
-### Configuration Enhancements
-- **YAML Configuration** - Created initial configuration file structure
-- **Environment Variables** - Implemented environment variable support for container configuration
-- **API Rate Limiting** - Added configurable rate limiting for ArXiv API access
+---
 
-### Documentation
-- **Setup Instructions** - Created installation and setup documentation
-- **README** - Established initial project documentation with overview and features
-- **Configuration Guide** - Documented configuration options and their effects
-
-### Dependencies and Libraries
-- **MongoDB Python Driver** - Integrated PyMongo for database access
-- **Neo4j Python Driver** - Added Neo4j connectivity for graph operations
-- **Hugging Face Transformers** - Integrated for text embedding generation
-- **Docker and Docker Compose** - Established containerization foundation
+## Version 0.0.1 (May 23, 2025)
