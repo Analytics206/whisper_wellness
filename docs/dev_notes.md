@@ -18,6 +18,14 @@
 - Ability to delete specific data
 - this is for testing git
 
+# Create and activate a virtual environment
+python3.11 -m venv venv
+source venv/bin/activate  # On Linux
+
+# Install UV and other development dependencies
+pip install uv
+uv pip install -e ".[dev]"
+
 ### System monitoring with Prometheus/Grafana
 
 The WhisperWell project now includes a comprehensive monitoring solution using Prometheus and Grafana to track system and container metrics.
