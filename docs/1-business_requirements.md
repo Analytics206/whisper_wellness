@@ -60,6 +60,7 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 | BRD-13 | Goal Management System | GOAL-01 to GOAL-07 |
 | BRD-14 | Journal & Reflection Tools | JOURN-01 to JOURN-06 |
 | BRD-15 | Journal search | JOURN-01 to JOURN-06 |
+| BRD-35 | AI Configuration | AICONF-01 to AICONF-04 |
 | BRD-17 | Mood tracking with emoji or slider interface | UX-001, UX-002 |
 | BRD-19 | AI-powered journaling with context-aware suggestions | AI-001, AI-002 |
 | BRD-22 | Personal memory management | MEM-005 |
@@ -71,6 +72,7 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 | BRD-10 | User Experience & Accessibility | NUSE-01 to NUSE-04 |
 | BRD-18 | Voice command interface | VOICE-003 |
 | BRD-20 | Notification & Motivation System | NOTIF-01 to NOTIF-05 |
+| BRD-36 | Analytics & Reporting Implementation | ANAL-01 to ANAL-05 |
 | BRD-27 | Multi-device synchronization | SYNC-002 |
 
 ### Analytics & Data Management

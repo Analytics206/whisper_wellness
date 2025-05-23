@@ -38,9 +38,9 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - **CONV-12**: Implement voice activity detection
 - **CONV-13**: Support for voice command customization
 
-### 3.9 AI Configuration (AICONF)
+### 3.9 AI Configuration (AICONF) (BRD-35)
 
-### 3.10 Speech-to-Text (STT)
+### 3.10 Speech-to-Text (STT) (BRD-33)
 - **STT-001**: Implement real-time speech-to-text for chat interactions (BRD-33)
 - **STT-002**: Support multiple languages with auto-detection
 - **STT-003**: Enable punctuation and formatting in transcriptions
@@ -48,8 +48,8 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - **STT-005**: Support offline STT capabilities
 - **STT-006**: Sync STT preferences across devices
 
-### 3.11 Text-to-Speech (TTS)
-- **TTS-001**: Implement text-to-speech with at least two distinct voice options
+### 3.11 Text-to-Speech (TTS) (BRD-32)
+- **TTS-001**: Implement text-to-speech with at least two distinct voice options (BRD-32)
 - **TTS-002**: Allow users to adjust speech rate and pitch
 - **TTS-003**: Enable/disable text-to-speech per conversation
 - **TTS-004**: Support offline TTS capabilities for privacy-sensitive users
@@ -75,20 +75,20 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - **GOAL-06**: Generate achievement badges for milestones
 - **GOAL-07**: Provide time-based analytics on goal progress
 
-### 3.5 Journal & Reflection (JOURN)
-- **JOURN-01**: Support rich text journal entries
-- **JOURN-02**: Enable voice-to-text journaling
-- **JOURN-03**: Track mood and emotions with each entry
-- **JOURN-04**: Generate AI reflections on journal content
-- **JOURN-05**: Allow searching entries by date, topic, or mood
-- **JOURN-06**: Support media attachments in entries
+### 3.5 Journal & Reflection (JOURN) (BRD-14, BRD-15)
+- **JOURN-01**: Support rich text journal entries (BRD-14)
+- **JOURN-02**: Enable voice-to-text journaling (BRD-14)
+- **JOURN-03**: Track mood and emotions with each entry (BRD-17)
+- **JOURN-04**: Generate AI reflections on journal content (BRD-19)
+- **JOURN-05**: Allow searching entries by date, topic, or mood (BRD-15)
+- **JOURN-06**: Support media attachments in entries (BRD-14)
 
-### 3.6 Notification System (NOTIF)
-- **NOTIF-01**: Send contextual reminders for goals
-- **NOTIF-02**: Celebrate milestone achievements
-- **NOTIF-03**: Provide progress nudges and motivational messages
-- **NOTIF-04**: Allow customization of notification preferences
-- **NOTIF-05**: Support scheduled and location-based reminders
+### 3.6 Notification System (NOTIF) (BRD-20)
+- **NOTIF-01**: Send contextual reminders for goals (BRD-20)
+- **NOTIF-02**: Celebrate milestone achievements (BRD-20)
+- **NOTIF-03**: Provide progress nudges and motivational messages (BRD-20)
+- **NOTIF-04**: Allow customization of notification preferences (BRD-20)
+- **NOTIF-05**: Support scheduled and location-based reminders (BRD-20)
 
 ### 3.7 Data Management (DATA)
 - **DATA-01**: Store user data with end-to-end encryption
@@ -97,12 +97,12 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - **DATA-04**: Provide secure data backup and recovery
 - **DATA-05**: Allow selective data deletion
 
-### 3.8 Analytics & Reporting (ANAL)
-- **ANAL-01**: Track user engagement metrics
-- **ANAL-02**: Generate personal growth insights
-- **ANAL-03**: Provide goal completion statistics
-- **ANAL-04**: Create visual progress reports
-- **ANAL-05**: Export reports in multiple formats
+### 3.8 Analytics & Reporting (ANAL) (BRD-36)
+- **ANAL-01**: Track user engagement metrics (BRD-23)
+- **ANAL-02**: Generate personal growth insights (BRD-23)
+- **ANAL-03**: Provide goal completion statistics (BRD-13)
+- **ANAL-04**: Create visual progress reports (BRD-23)
+- **ANAL-05**: Export reports in multiple formats (BRD-23)
 
 ## 4. Non-Functional Requirements
 

@@ -84,13 +84,13 @@ This document tracks the implementation status of all requirements, linking Prod
 | CONV-12 | Voice activity detection | BRD-33 | ❌ | Phase 3 |
 | CONV-13 | Voice command customization | BRD-18 | ❌ | Phase 3 |
 
-## AI Configuration
+## AI Configuration (BRD-35)
 | PRD ID | Description | Linked BRD ID | Status | Notes |
 |--------|-------------|---------------|--------|-------|
 | AICONF-01 | Multiple LLM model tiers | BRD-30 | ❌ | |
 | AICONF-02 | Companion personas | BRD-31 | ❌ | |
-| AICONF-03 | Interaction style customization | - | ❌ | |
-| AICONF-04 | Persona preview | - | ❌ | |
+| AICONF-03 | Interaction style customization | BRD-35 | ❌ | |
+| AICONF-04 | Persona preview | BRD-35 | ❌ | |
 
 ## Memory Management
 | PRD ID | Description | Linked BRD ID | Status | Notes |
@@ -112,7 +112,7 @@ This document tracks the implementation status of all requirements, linking Prod
 | GOAL-06 | Achievement badges | BRD-13 | ❌ | |
 | GOAL-07 | Time-based analytics | BRD-13 | ❌ | |
 
-## Journal & Reflection
+## Journal & Reflection (BRD-14, BRD-15, BRD-17, BRD-19)
 | PRD ID | Description | Linked BRD ID | Status | Notes |
 |--------|-------------|---------------|--------|-------|
 | JOURN-01 | Rich text entries | BRD-14 | ❌ | |
@@ -120,25 +120,25 @@ This document tracks the implementation status of all requirements, linking Prod
 | JOURN-03 | Mood/emotion tracking | BRD-17 | ❌ | |
 | JOURN-04 | AI reflections | BRD-19 | ❌ | |
 | JOURN-05 | Search functionality | BRD-15 | ❌ | |
-| JOURN-06 | Media attachments | - | ❌ | |
+| JOURN-06 | Media attachments | BRD-14 | ❌ | |
 
-## Notification System
+## Notification System (BRD-20)
 | PRD ID | Description | Linked BRD ID | Status | Notes |
 |--------|-------------|---------------|--------|-------|
 | NOTIF-01 | Goal reminders | BRD-20 | ❌ | |
 | NOTIF-02 | Milestone celebrations | BRD-20 | ❌ | |
 | NOTIF-03 | Progress nudges | BRD-20 | ❌ | |
 | NOTIF-04 | Preferences | BRD-20 | ❌ | |
-| NOTIF-05 | Location-based reminders | - | ❌ | |
+| NOTIF-05 | Location-based reminders | BRD-20 | ❌ | |
 
-## Analytics & Reporting
+## Analytics & Reporting (BRD-23, BRD-36)
 | PRD ID | Description | Linked BRD ID | Status | Notes |
 |--------|-------------|---------------|--------|-------|
-| ANAL-01 | Engagement metrics | BRD-23 | ❌ | |
-| ANAL-02 | Growth insights | BRD-23 | ❌ | |
-| ANAL-03 | Goal statistics | BRD-23 | ❌ | |
-| ANAL-04 | Visual reports | - | ❌ | |
-| ANAL-05 | Report export | - | ❌ | |
+| ANAL-01 | Engagement metrics | BRD-23, BRD-36 | ❌ | |
+| ANAL-02 | Growth insights | BRD-23, BRD-36 | ❌ | |
+| ANAL-03 | Goal statistics | BRD-13, BRD-23, BRD-36 | ❌ | |
+| ANAL-04 | Visual reports | BRD-23, BRD-36 | ❌ | |
+| ANAL-05 | Report export | BRD-23, BRD-36 | ❌ | |
 
 ## Performance
 | PRD ID | Description | Linked BRD ID | Status | Notes |
@@ -165,3 +165,7 @@ This document tracks the implementation status of all requirements, linking Prod
 - **Not Started**: 70%
 
 Last Updated: 2025-05-23
+
+## New BRDs Added
+- **BRD-35**: AI Configuration
+- **BRD-36**: Analytics & Reporting Implementation
