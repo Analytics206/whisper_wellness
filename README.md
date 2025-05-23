@@ -118,11 +118,14 @@ WhisperWell is built on a modern, scalable microservices architecture:
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+
-- Python 3.10+
+- React 19.1 with TypeScript
+- Node.js 24.1.0
+- NestJS 11
+- Python 3.11
 - Docker & Docker Compose
-- MongoDB 6.0+
-- Neo4j 5.0+
+- MongoDB/atlas 8.0+? - latest stable
+- Neo4j 5.0+ - latest stable
+- Qdrant 1.14 - latest stable
 
 ### Local Development
 
