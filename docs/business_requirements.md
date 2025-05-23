@@ -48,7 +48,10 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 ### Core Functionality
 | BRD ID | Feature Description | Linked PRD Requirement(s) |
 |--------|---------------------|----------------------------|
-| BRD-07 | Conversational AI Companion | CONV-01 to CONV-05 |
+| BRD-07 | Conversational AI Companion | CONV-01 to CONV-09 |
+| BRD-32 | Text-to-Speech Functionality | TTS-001 to TTS-005 |
+| BRD-33 | Speech-to-Text for Chat Interactions | STT-001 to STT-004 |
+| BRD-34 | Voice Feature Implementation Plan | VF-001 to VF-008 |
 | BRD-08 | Conversation history | CONV-06 to CONV-08 |
 | BRD-31 | Companion personas and selection | AICONF-02 | 
 | BRD-09 | Conversation search | CONV-09 to CONV-11 |
@@ -83,6 +86,36 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 | BRD-25 | iOS app | IOS-01 to IOS-05 |
 
 ## 4. Functional Requirements (Refined)
+### Voice Implementation Phases
+
+#### Phase 1: Foundation (MVP)
+- Basic voice-to-text for journal entries
+- Simple voice commands for app navigation
+- Basic text-to-speech for AI responses
+- Cloud-based speech processing
+- Support for major languages (English, Spanish, etc.)
+
+#### Phase 2: Enhanced Interaction
+- Full speech-to-text for chat interface
+- Expanded voice command vocabulary
+- Context-aware voice interactions
+- Improved accuracy with user-specific speech models
+- Background listening for wake words
+
+#### Phase 3: Advanced Features
+- Emotion detection in voice
+- Multilingual support with auto-detection
+- Voice-based mood tracking
+- Custom voice commands and shortcuts
+- Integration with device voice assistants
+
+#### Phase 4: Maturity
+- Full offline voice processing
+- Custom wake word training
+- Advanced voice analytics
+- Voice-based authentication
+- Cross-device voice synchronization
+
 ### Core Features (Phase 1)
 #### User Management
 - ✅ User registration and authentication (anonymous mode supported)
@@ -98,6 +131,8 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 
 #### AI Companion
 - ✅ Conversational AI for natural, contextual interactions
+- ✅ Speech-to-text for chat interactions with real-time transcription
+- ✅ Voice command system for app navigation and actions
 - ✅ Conversation history and search functionality
 - ✅ Topic-based conversation memory and continuity
 - ✅ Customizable interaction styles and conversation topics
@@ -200,6 +235,15 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - **Auth Provider:** Auth0 or Firebase Auth
 - **MFA Support:** Biometric and TOTP options
 - **Session Management:** Secure, encrypted session tokens
+
+### Voice & Speech
+- **TTS Engine:** Local/cloud hybrid for natural speech
+- **STT Support:** Integration with platform speech recognition
+- **Voice Features Phased Implementation:**
+  - **Phase 1 (MVP):** Basic voice input for journaling, simple voice commands
+  - **Phase 2:** Full chat STT, improved voice command vocabulary
+  - **Phase 3:** Advanced features like voice emotion detection, multilingual support
+  - **Phase 4:** Offline voice processing, custom wake words
 
 ---
 

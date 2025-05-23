@@ -70,7 +70,16 @@ WhisperWell is designed as a scalable, privacy-focused AI companion platform tha
 
 ### 3. Service Layer
 - **AI/ML Services**
-  - Conversation engine
+  - Conversation engine (GPT-4 based)
+  - Speech-to-Text processing
+    - Real-time audio streaming
+    - Multi-language support
+    - Punctuation and formatting
+  - Text-to-Speech generation
+    - Multiple voice options
+    - Emotion and tone adaptation
+  - Voice Activity Detection
+  - Language Identification
   - Emotion analysis
   - Personalization models
 - **User Services**
@@ -82,7 +91,29 @@ WhisperWell is designed as a scalable, privacy-focused AI companion platform tha
   - Personal insights generation
   - Performance monitoring
 
-### 4. Data Layer
+### 4. Voice Processing Pipeline
+- **Audio Capture**
+  - WebRTC for browser-based capture
+  - Mobile audio APIs for native apps
+  - Noise reduction and enhancement
+- **Speech Recognition**
+  - Cloud-based (OpenAI Whisper API)
+  - On-device (Whisper.cpp)
+  - Real-time transcription
+- **Audio Processing**
+  - Web Audio API (browser)
+  - Librosa (server-side)
+  - Format conversion with FFmpeg
+- **Command Processing**
+  - Custom NLU pipeline
+  - Intent recognition
+  - Context-aware processing
+- **Audio Storage**
+  - Encrypted temporary storage
+  - Metadata indexing
+  - Access control
+
+### 5. Data Layer
 - **Vector Database (Qdrant)**
   - Stores conversation embeddings
   - Enables semantic search
@@ -90,6 +121,9 @@ WhisperWell is designed as a scalable, privacy-focused AI companion platform tha
 - **Document Database (MongoDB)**
   - User profiles
   - Journal entries
+  - Voice recordings metadata
+  - Speech recognition results
+  - Voice preferences
   - System configurations
 - **Graph Database (Neo4j)**
   - Relationship mapping
@@ -115,7 +149,14 @@ WhisperWell is designed as a scalable, privacy-focused AI companion platform tha
 
 ## Security Architecture
 
-### Data Protection
+### Voice Data Protection
+- End-to-end encryption for voice data
+- Secure temporary storage of audio
+- Automatic deletion of raw audio after processing
+- User consent management for voice data
+- Compliance with voice data regulations
+
+### General Data Protection
 - End-to-end encryption
 - Zero-knowledge architecture
 - Regular security audits
@@ -126,6 +167,16 @@ WhisperWell is designed as a scalable, privacy-focused AI companion platform tha
 - Right to be forgotten workflow
 
 ## Monitoring & Observability
+
+### Voice-Specific Metrics
+- Word Error Rate (WER)
+- Character Error Rate (CER)
+- Processing latency
+- Language detection accuracy
+- Speaker diarization metrics
+- Audio quality indicators
+
+### System Metrics
 
 ### Metrics Collection
 - Prometheus for time-series data

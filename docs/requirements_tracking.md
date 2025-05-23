@@ -48,6 +48,25 @@ This document tracks the implementation status of all requirements, linking Prod
 | AUTH-04 | Data export/import | BRD-21 | ❌ | |
 | AUTH-05 | Multi-device sync | BRD-27 | ❌ | |
 
+## Speech-to-Text
+| PRD ID | Description | Linked BRD ID | Status | Notes |
+|--------|-------------|---------------|--------|-------|
+| STT-001 | Real-time speech-to-text for chat | BRD-33 | ❌ | Phase 2 |
+| STT-002 | Multiple languages with auto-detection | BRD-33 | ❌ | Phase 2 |
+| STT-003 | Punctuation and formatting | BRD-33 | ❌ | Phase 2 |
+| STT-004 | Accuracy feedback and correction | BRD-33 | ❌ | Phase 3 |
+| STT-005 | Offline STT capabilities | BRD-33 | ❌ | Phase 3 |
+| STT-006 | Sync STT preferences | BRD-33 | ❌ | Phase 3 |
+
+## Text-to-Speech
+| PRD ID | Description | Linked BRD ID | Status | Notes |
+|--------|-------------|---------------|--------|-------|
+| TTS-001 | Implement text-to-speech with multiple voices | BRD-32 | ❌ | |
+| TTS-002 | Voice speed and pitch adjustment | BRD-32 | ❌ | |
+| TTS-003 | Per-conversation TTS toggle | BRD-32 | ❌ | |
+| TTS-004 | Offline TTS capabilities | BRD-32 | ❌ | |
+| TTS-005 | Sync TTS preferences | BRD-32 | ❌ | |
+
 ## Conversational AI
 | PRD ID | Description | Linked BRD ID | Status | Notes |
 |--------|-------------|---------------|--------|-------|
@@ -57,6 +76,13 @@ This document tracks the implementation status of all requirements, linking Prod
 | CONV-04 | Emotional intelligence | BRD-07 | ❌ | |
 | CONV-05 | Conversation history | BRD-08 | ❌ | |
 | CONV-06 | Voice command interface | BRD-18 | ❌ | |
+| CONV-07 | TTS with multiple voices | BRD-32 | ❌ | |
+| CONV-08 | Voice speed adjustment | BRD-32 | ❌ | |
+| CONV-09 | Per-conversation TTS toggle | BRD-32 | ❌ | |
+| CONV-10 | Real-time STT for chat | BRD-33 | ❌ | Phase 2 |
+| CONV-11 | Voice-based follow-up questions | BRD-33 | ❌ | Phase 3 |
+| CONV-12 | Voice activity detection | BRD-33 | ❌ | Phase 3 |
+| CONV-13 | Voice command customization | BRD-18 | ❌ | Phase 3 |
 
 ## AI Configuration
 | PRD ID | Description | Linked BRD ID | Status | Notes |
@@ -135,7 +161,7 @@ This document tracks the implementation status of all requirements, linking Prod
 ## Implementation Status Summary
 - **Completed**: 0%
 - **In Progress**: 0%
-- **Planned**: 0%
-- **Not Started**: 100%
+- **Planned**: 30%
+- **Not Started**: 70%
 
 Last Updated: 2025-05-23

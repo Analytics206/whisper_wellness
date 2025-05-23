@@ -7,7 +7,7 @@ WhisperWell is built on a modern, cloud-native architecture designed for scale, 
 ## Core Technologies
 
 ### Frontend
-- **Framework**: React 18 with TypeScript
+- **Framework**: React 19.1 with TypeScript
 - **State Management**: Redux Toolkit with RTK Query
 - **UI Components**: Material-UI (MUI) with custom theme
 - **Progressive Web App**: Service workers for offline support
@@ -16,27 +16,37 @@ WhisperWell is built on a modern, cloud-native architecture designed for scale, 
 
 ### Backend
 - **API Gateway**: Kong/NGINX
-- **Service Framework**: Node.js with NestJS
-- **Authentication**: Auth0 with JWT
+- **Service Framework**: Node.js 24.1.0 with NestJS 11
+- **Authentication**: Auth0 with JWT (Proprietary)
 - **API**: GraphQL (Apollo Server) & REST
 - **WebSockets**: Socket.IO for real-time features
 
 ### AI/ML Services
-- **Conversation Engine**: GPT-4 with fine-tuning
+- **Conversation Engine**: GPT-4 with fine-tuning (Proprietary - OpenAI)
+- **Speech-to-Text**: OpenAI Whisper (Cloud API is proprietary, On-Device is open source)
+- **Text-to-Speech**: 
+  - ElevenLabs (Proprietary)
+  - Coqui TTS (Open Source)
+- **Voice Activity Detection**: Silero VAD
+- **Language Identification**: FastText LangID
 - **Embedding Models**: Sentence Transformers (all-MiniLM-L6-v2)
 - **Vector Database**: Qdrant (GPU-accelerated)
 - **ML Framework**: PyTorch with CUDA
 - **Model Serving**: Triton Inference Server
 
 ### Data Storage
-- **Primary Database**: MongoDB Atlas (sharded)
+- **Primary Database**: MongoDB Atlas (sharded) (Proprietary cloud service, MongoDB Community is open source)
   - User profiles
   - Journal entries
+  - Voice recordings (metadata only)
+  - Speech recognition results
   - System configurations
+  - Chat history
+  - Goals and progress
 - **Vector Database**: Qdrant
   - Conversation embeddings
   - Semantic search indices
-- **Graph Database**: Neo4j Aura
+- **Graph Database**: Neo4j Aura (Proprietary cloud service, Neo4j Community is open source)
   - Relationship mapping
   - Knowledge graph
 - **Cache**: Redis
@@ -44,19 +54,30 @@ WhisperWell is built on a modern, cloud-native architecture designed for scale, 
   - Rate limiting
   - Real-time features
 
+### Voice Processing Pipeline
+- **Real-time Processing**: WebRTC for browser-based audio capture
+- **Audio Processing**: Web Audio API + librosa
+- **Speech Recognition**:
+  - **Cloud**: OpenAI Whisper API (Proprietary)
+  - On-Device: Whisper.cpp for offline mode
+- **Voice Command Processing**: Custom NLU pipeline
+- **Audio Storage**: Encrypted temporary storage
+- **Language Support**: 50+ languages with auto-detection
+
 ### Infrastructure
 - **Containerization**: Docker + Kubernetes
 - **CI/CD**: GitHub Actions + ArgoCD
 - **Infrastructure as Code**: Terraform
 - **Service Mesh**: Linkerd
 - **API Gateway**: Kong
+- **Media Processing**: FFmpeg for audio format conversion
 
 ### Monitoring & Observability
 - **Metrics**: Prometheus + Grafana
 - **Logging**: ELK Stack (Elasticsearch, Logstash, Kibana)
 - **Tracing**: Jaeger
 - **Alerting**: Alertmanager + PagerDuty
-- **Synthetic Monitoring**: New Relic Synthetics
+- **Synthetic Monitoring**: New Relic Synthetics (Proprietary)
 
 ## Deployment Architecture
 
@@ -74,13 +95,16 @@ WhisperWell is built on a modern, cloud-native architecture designed for scale, 
 - Multi-region deployment
 - Auto-scaling node groups
 - Database read replicas
-- Global CDN with Cloudflare
+- Global- **CDN**: Cloudflare (Proprietary with free tier)
 
 ## Data Model
 
 ### MongoDB Collections
 - `users` - User profiles and authentication
 - `journal_entries` - Encrypted journal content
+- `voice_recordings` - Metadata for voice recordings
+- `speech_results` - Processed speech recognition data
+- `voice_preferences` - User voice interaction settings
 - `goals` - User goals and progress
 - `conversations` - Chat history with AI
 - `analytics_events` - User interaction data
@@ -100,7 +124,9 @@ WhisperWell is built on a modern, cloud-native architecture designed for scale, 
 ### Data Protection
 - **Encryption at Rest**: AES-256
 - **Encryption in Transit**: TLS 1.3
-- **Key Management**: AWS KMS/HashiCorp Vault
+- **Key Management**: 
+  - AWS KMS (Proprietary)
+  - HashiCorp Vault (Open Source with Enterprise features)
 - **Data Masking**: PII redaction
 - **Audit Logging**: All data access logged
 
@@ -148,7 +174,16 @@ WhisperWell is built on a modern, cloud-native architecture designed for scale, 
 - Automated dependency updates with Dependabot
 
 ## Monitoring & Alerting
+> Note: The following components have proprietary aspects:
+> - **Grafana Cloud** (Proprietary SaaS, self-hosted is open source)
+> - **ELK Stack** (Open Source, but Elastic Cloud is proprietary)
+> - **PagerDuty** (Proprietary)
 - Custom dashboards in Grafana
+  - Voice recognition accuracy metrics
+  - Processing latency monitoring
+  - Language detection analytics
 - SLO-based alerting
-- Anomaly detection
+- Anomaly detection for voice processing
 - Cost monitoring and optimization
+- Voice quality metrics (WER, CER)
+- Speaker diarization accuracy

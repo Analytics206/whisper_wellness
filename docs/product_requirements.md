@@ -30,8 +30,30 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - **CONV-04**: Implement emotional intelligence in responses
 - **CONV-05**: Store and recall conversation history
 - **CONV-06**: Enable voice command interface (VOICE-003)
+- **CONV-07**: Implement text-to-speech with multiple voice options (TTS-001)
+- **CONV-08**: Support voice speed adjustment (TTS-002)
+- **CONV-09**: Enable/disable text-to-speech per conversation (TTS-003)
+- **CONV-10**: Real-time speech-to-text for chat (STT-001)
+- **CONV-11**: Support voice-based follow-up questions
+- **CONV-12**: Implement voice activity detection
+- **CONV-13**: Support for voice command customization
 
 ### 3.9 AI Configuration (AICONF)
+
+### 3.10 Speech-to-Text (STT)
+- **STT-001**: Implement real-time speech-to-text for chat interactions (BRD-33)
+- **STT-002**: Support multiple languages with auto-detection
+- **STT-003**: Enable punctuation and formatting in transcriptions
+- **STT-004**: Provide accuracy feedback and correction tools
+- **STT-005**: Support offline STT capabilities
+- **STT-006**: Sync STT preferences across devices
+
+### 3.11 Text-to-Speech (TTS)
+- **TTS-001**: Implement text-to-speech with at least two distinct voice options
+- **TTS-002**: Allow users to adjust speech rate and pitch
+- **TTS-003**: Enable/disable text-to-speech per conversation
+- **TTS-004**: Support offline TTS capabilities for privacy-sensitive users
+- **TTS-005**: Sync TTS preferences across devices
 - **AICONF-01**: Support multiple LLM model tiers with varying capabilities (BRD-30)
 - **AICONF-02**: Allow users to select and switch between different companion personas (BRD-31)
 - **AICONF-03**: Enable customization of companion interaction style and tone
@@ -133,7 +155,8 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 
 ### 6.2 Phase 2: Enhanced Features (2-3 months)
 - **AUTH-04**, **AUTH-05**
-- **CONV-04** to **CONV-06**
+- **CONV-04** to **CONV-09**
+- **STT-001** to **STT-003** (Basic STT for chat)
 - **MEM-003** to **MEM-005**
 - **GOAL-04** to **GOAL-07**
 - **JOURN-02**, **JOURN-04**, **JOURN-05**
@@ -142,6 +165,8 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - **DEPLOY-003**
 
 ### 6.3 Phase 3: Advanced Features (3-4 months)
+- **CONV-10** to **CONV-13** (Advanced STT features)
+- **STT-004** to **STT-006** (Enhanced STT)
 - **JOURN-06**
 - **ANAL-04**, **ANAL-05**
 - **NSEC-00** to **NSEC-05**
