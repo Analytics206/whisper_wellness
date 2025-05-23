@@ -37,6 +37,10 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - **CONV-11**: Support voice-based follow-up questions
 - **CONV-12**: Implement voice activity detection
 - **CONV-13**: Support for voice command customization
+- **CONV-14**: Handle multiple speakers in voice input
+- **CONV-15**: Support for background noise reduction
+- **CONV-16**: Accent and dialect recognition
+- **CONV-17**: Voice biometrics for user identification
 
 ### 3.9 AI Configuration (AICONF) (BRD-35)
 
@@ -47,6 +51,9 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - **STT-004**: Provide accuracy feedback and correction tools
 - **STT-005**: Support offline STT capabilities
 - **STT-006**: Sync STT preferences across devices
+- **STT-007**: Handle poor audio quality and background noise
+- **STT-008**: Support for regional accents and dialects
+- **STT-009**: Real-time transcription confidence scoring
 
 ### 3.11 Text-to-Speech (TTS) (BRD-32)
 - **TTS-001**: Implement text-to-speech with at least two distinct voice options (BRD-32)
@@ -54,6 +61,9 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - **TTS-003**: Enable/disable text-to-speech per conversation
 - **TTS-004**: Support offline TTS capabilities for privacy-sensitive users
 - **TTS-005**: Sync TTS preferences across devices
+- **TTS-006**: Support for emotional tone variation
+- **TTS-007**: Natural pauses and prosody control
+- **TTS-008**: Cross-language voice consistency
 - **AICONF-01**: Support multiple LLM model tiers with varying capabilities (BRD-30)
 - **AICONF-02**: Allow users to select and switch between different companion personas (BRD-31)
 - **AICONF-03**: Enable customization of companion interaction style and tone
@@ -96,6 +106,11 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - **DATA-03**: Ensure GDPR and CCPA compliance
 - **DATA-04**: Provide secure data backup and recovery
 - **DATA-05**: Allow selective data deletion
+- **DATA-06**: Support cross-device data migration
+- **DATA-07**: Version control for user data
+- **DATA-08**: Conflict resolution for data synchronization
+- **DATA-09**: Individual user disaster recovery
+- **DATA-10**: Hierarchical storage for vector embeddings
 
 ### 3.8 Analytics & Reporting (ANAL) (BRD-36)
 - **ANAL-01**: Track user engagement metrics (BRD-23)
@@ -112,6 +127,10 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - **NPERF-02**: Achieve <2s response time for AI interactions
 - **NPERF-03**: Support offline functionality with sync
 - **NPERF-04**: Handle 1M+ journal entries per user
+- **NPERF-05**: Edge computing for low-latency voice processing
+- **NPERF-06**: Graceful degradation during high load
+- **NPERF-07**: Vector database performance optimization
+- **NPERF-08**: Battery-efficient background processing
 
 ### 4.2 Security (NSEC)
 - **NSEC-00**: Implement zero-knowledge architecture (BRD-03)
@@ -119,13 +138,20 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - **NSEC-02**: Support optional biometric authentication (BRD-28)
 - **NSEC-03**: Regular security audits and updates
 - **NSEC-04**: Penetration testing every quarter
-- **NSEC-05**: Ensure GDPR and CCPA compliance (BRD-26)
+- **NSEC-05**: Ensure GDPR, CCPA, and regional compliance (BRD-26)
+- **NSEC-06**: Multi-tenant data isolation (BRD-39)
+- **NSEC-07**: Content moderation and safety protocols (BRD-40)
+- **NSEC-08**: Voice data handling and retention policies
 
 ### 4.3 Usability (NUSE)
 - **NUSE-01**: Intuitive interface with minimal learning curve
 - **NUSE-02**: WCAG 2.1 AA compliance
 - **NUSE-03**: Support for light/dark themes
 - **NUSE-04**: Responsive design for all device sizes
+- **NUSE-05**: Right-to-left (RTL) language support
+- **NUSE-06**: Cultural sensitivity in UI/UX
+- **NUSE-07**: Offline functionality indicators
+- **NUSE-08**: Error recovery guidance
 
 ## 5. Deployment Architecture
 
@@ -181,7 +207,37 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - **SM-04**: 70% of set goals have measurable progress
 - **SM-05**: NPS score > 40
 
-## 8. Glossary
+## 8. New Requirements Sections
+
+### 8.1 Error Handling & Recovery (ERRH)
+- **ERRH-01**: Handle voice recognition failures gracefully
+- **ERRH-02**: Recover from network interruptions
+- **ERRH-03**: User experience during AI service outages
+- **ERRH-04**: Data sync conflict resolution
+- **ERRH-05**: Partial conversation recovery
+
+### 8.2 Content Moderation (CM)
+- **CM-001**: Inappropriate content detection
+- **CM-002**: Suicide ideation detection and response
+- **CM-003**: Legal liability management
+- **CM-004**: User reporting system
+- **CM-005**: Automated content flagging
+
+### 8.3 Internationalization (I18N)
+- **I18N-01**: RTL language support
+- **I18N-02**: Cultural sensitivity in AI responses
+- **I18N-03**: Local compliance requirements
+- **I18N-04**: Timezone and locale handling
+- **I18N-05**: Regional data storage requirements
+
+### 8.4 AI Model Management (AIMM)
+- **AIMM-01**: Model versioning and rollback
+- **AIMM-02**: A/B testing framework
+- **AIMM-03**: Performance monitoring
+- **AIMM-04**: Update process without service disruption
+- **AIMM-05**: Fallback mechanisms for degraded performance
+
+## 9. Glossary
 - **PWA**: Progressive Web App
 - **SMART Goals**: Specific, Measurable, Achievable, Relevant, Time-bound
 - **E2EE**: End-to-End Encryption
@@ -190,4 +246,6 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - **K8s**: Kubernetes
 - **ZKA**: Zero-Knowledge Architecture
 - **RAG**: Retrieval-Augmented Generation
+- **RTL**: Right-to-Left
+- **A/B Testing**: Comparing two versions of a feature to determine which performs better
 

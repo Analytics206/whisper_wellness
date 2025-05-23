@@ -33,6 +33,8 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 | BRD-01 | Use Kubernetes for container orchestration | DCK-01 to DCK-03 |
 | BRD-02 | Performance & Scalability | NPERF-01 to NPERF-04 |
 | BRD-29 | Self-hosting option for enterprise clients | DEPLOY-001 |
+| BRD-37 | Hierarchical storage for vector database scaling | DATA-06 |
+| BRD-38 | Edge computing for latency-sensitive voice processing | VF-009 |
 
 ### Security & Privacy
 | BRD ID | Feature Description | Linked PRD Requirement(s) |
@@ -40,18 +42,22 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 | BRD-03 | Zero-knowledge architecture with user-controlled encryption keys | SEC-003, SEC-004 |
 | BRD-04 | User Authentication & Profile Management | AUTH-01 to AUTH-05 |
 | BRD-05 | End-to-end encrypted data storage | SEC-001, SEC-002 |
-| BRD-06 | Secure Data Management | DATA-01 to DATA-05 |
+| BRD-06 | Secure Data Management | DATA-01 to DATA-06 |
 | BRD-16 | Incognito mode with opt-out data retention | PRIV-001 |
-| BRD-26 | Security & Compliance | NSEC-01 to NSEC-04 |
+| BRD-26 | Security & Compliance | NSEC-01 to NSEC-06 |
 | BRD-28 | Biometric authentication for mobile | AUTH-003 |
+| BRD-39 | Multi-tenant security and data isolation | NSEC-05 |
+| BRD-40 | Content moderation and safety protocols | SEC-005 |
 
 ### Core Functionality
 | BRD ID | Feature Description | Linked PRD Requirement(s) |
 |--------|---------------------|----------------------------|
-| BRD-07 | Conversational AI Companion | CONV-01 to CONV-09 |
-| BRD-32 | Text-to-Speech Functionality | TTS-001 to TTS-005 |
-| BRD-33 | Speech-to-Text for Chat Interactions | STT-001 to STT-004 |
-| BRD-34 | Voice Feature Implementation Plan | VF-001 to VF-008 |
+| BRD-07 | Conversational AI Companion | CONV-01 to CONV-13 |
+| BRD-32 | Text-to-Speech Functionality | TTS-001 to TTS-008 |
+| BRD-33 | Speech-to-Text for Chat Interactions | STT-001 to STT-007 |
+| BRD-34 | Voice Feature Implementation Plan | VF-001 to VF-013 |
+| BRD-41 | AI Model Management System | AI-003 to AI-006 |
+| BRD-42 | Voice Processing Edge Cases | VF-010 to VF-013 |
 | BRD-08 | Conversation history | CONV-06 to CONV-08 |
 | BRD-31 | Companion personas and selection | AICONF-02 | 
 | BRD-09 | Conversation search | CONV-09 to CONV-11 |
@@ -69,11 +75,13 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 ### User Experience
 | BRD ID | Feature Description | Linked PRD Requirement(s) |
 |--------|---------------------|----------------------------|
-| BRD-10 | User Experience & Accessibility | NUSE-01 to NUSE-04 |
+| BRD-10 | User Experience & Accessibility | NUSE-01 to NUSE-06 |
 | BRD-18 | Voice command interface | VOICE-003 |
 | BRD-20 | Notification & Motivation System | NOTIF-01 to NOTIF-05 |
-| BRD-36 | Analytics & Reporting Implementation | ANAL-01 to ANAL-05 |
-| BRD-27 | Multi-device synchronization | SYNC-002 |
+| BRD-36 | Analytics & Reporting Implementation | ANAL-01 to ANAL-07 |
+| BRD-27 | Multi-device synchronization | SYNC-002 to SYNC-004 |
+| BRD-43 | Internationalization & Localization | I18N-01 to I18N-05 |
+| BRD-44 | Error Handling & Recovery | ERRH-01 to ERRH-04 |
 
 ### Analytics & Data Management
 | BRD ID | Feature Description | Linked PRD Requirement(s) |
@@ -157,14 +165,17 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 ---
 
 ## 5. Non-Functional Requirements
-### Security (Aligned with BRD-03, BRD-05, BRD-26)
+### Security (Aligned with BRD-03, BRD-05, BRD-26, BRD-39, BRD-40)
 - End-to-end encryption (AES-256, TLS 1.3)
 - Zero-knowledge architecture: client-side decryption only
 - Anonymous user mode (no email or phone number required)
 - Optional biometric lock for native apps (BRD-28)
-- Full compliance with GDPR and CCPA
-- Encrypted backups and data versioning
+- Full compliance with GDPR, CCPA, and other regional data protection laws
+- Encrypted backups with version control and point-in-time recovery
 - Regular security audits and penetration testing
+- Multi-tenant isolation with strict data boundaries
+- Content moderation and safety protocols for user-generated content
+- Suicide prevention and crisis response procedures
 
 ### Privacy & Trust (Aligned with BRD-16, PRIV-001)
 - No advertising or third-party data sharing
@@ -173,12 +184,15 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - Transparent data usage policies
 - User-controlled data retention settings
 
-### Performance & Scalability (Aligned with BRD-02, NPERF-01 to NPERF-04)
-- Fast, offline-capable PWA
+### Performance & Scalability (Aligned with BRD-02, BRD-37, BRD-38, NPERF-01 to NPERF-06)
+- Fast, offline-capable PWA with comprehensive offline support
 - Modular back end with future native expansion in mind
 - Scalable architecture with containerized services (BRD-00, BRD-01)
-- Optimized for low-latency interactions
-- Efficient resource utilization for mobile devices
+- Optimized for low-latency interactions with edge computing support
+- Hierarchical storage for efficient vector database scaling
+- Efficient resource utilization for mobile devices with battery optimization
+- Graceful degradation during high-load scenarios
+- Predictive text generation to mask voice processing latency
 
 ---
 
