@@ -1,5 +1,5 @@
 # Google Web Authentication Integration for WhisperWell (PWA)
-### 📌 Context - WhisperWell is a privacy-focused, scalable AI companion platform with a secure architecture. The PWA frontend and NestJS backend must handle Google authentication in a way that is secure, efficient, and compliant with privacy and regulatory standards.
+- 📌 Context - WhisperWell is a privacy-focused, scalable AI companion platform with a secure architecture. The PWA frontend and NestJS backend must handle Google authentication in a way that is secure, efficient, and compliant with privacy and regulatory standards.
 
 # 🔐 Authentication Options
 ## Option 1: OAuth 2.0 Authorization Code Flow with PKCE (Recommended for Web + PWA)
