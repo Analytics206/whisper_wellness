@@ -28,6 +28,7 @@ services:
         exec gosu mongodb mongod --tlsMode requireTLS \
              --tlsCertificateKeyFile /data/ssl/mongo.pem \
              --tlsCAFile /data/ssl/mongo-cert.crt \
+             --tlsAllowConnectionsWithoutCertificates \
              --bind_ip_all \
              --auth
       '
