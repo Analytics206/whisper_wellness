@@ -99,18 +99,29 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 ### Voice Implementation Phases
 
 #### Phase 1: Foundation (MVP)
+- User registration and (anonymous mode supported)
+- Google/Firebase authentication
+- Text chat
+- Text chat MongoDB storage
+- Text journaling
+- Text journaling MongoDB storage
+- Text memory organization with tags and search
+- Text journal vector embeddings for similarity/context recall
+- Chat vector embeddings for similarity/context recall
+- Local speech processing
 - Basic voice-to-text for journal entries
-- Simple voice commands for app navigation
+- Basic voice-to-text for chat interface
 - Basic text-to-speech for AI responses
-- Cloud-based speech processing
 - Support for major languages (English, Spanish, etc.)
 
 #### Phase 2: Enhanced Interaction
 - Full speech-to-text for chat interface
+- Simple voice commands for app navigation
 - Expanded voice command vocabulary
 - Context-aware voice interactions
 - Improved accuracy with user-specific speech models
 - Background listening for wake words
+- Cloud-based speech processing
 
 #### Phase 3: Advanced Features
 - Emotion detection in voice

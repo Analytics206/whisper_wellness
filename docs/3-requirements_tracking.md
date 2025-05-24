@@ -10,7 +10,7 @@ This document tracks the implementation status of all requirements, linking Prod
 - ⏳ = Planned
 - ❌ = Not Started
 - ➖ = Not Applicable
-
+- ⚠️ = Feature On Hold
 ---
 
 ## Infrastructure & Deployment
