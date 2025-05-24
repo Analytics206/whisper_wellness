@@ -1,0 +1,59 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: whisper-wellness-mongodb
+    restart: unless-stopped
+    # Load environment variables from .env file
+    env_file:
+      - .env
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+    user: root
+    volumes:
+      - mongodb_data:/data/db
+      - mongodb_config:/data/configdb
+      - ./mongo.pem:/etc/ssl/mongo.pem:ro
+      - ./mongo-cert.crt:/etc/ssl/mongo-cert.crt:ro
+    command: >
+      bash -c '
+        mkdir -p /data/ssl &&
+        cp /etc/ssl/mongo.pem /data/ssl/ &&
+        cp /etc/ssl/mongo-cert.crt /data/ssl/ &&
+        chmod 600 /data/ssl/mongo.pem &&
+        chmod 644 /data/ssl/mongo-cert.crt &&
+        chown -R mongodb:mongodb /data/ssl &&
+        exec gosu mongodb mongod --tlsMode requireTLS \
+             --tlsCertificateKeyFile /data/ssl/mongo.pem \
+             --tlsCAFile /data/ssl/mongo-cert.crt \
+             --bind_ip_all \
+             --auth
+      '
+    networks:
+      - whisper-wellness-network
+
+  whisper-wellness-qdrant:
+    image: qdrant/qdrant:latest
+    container_name: whisper-wellness-qdrant
+    restart: unless-stopped
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    networks:
+      - whisper-wellness-network
+
+networks:
+  whisper-wellness-network:
+    driver: bridge
+
+volumes:
+  qdrant_data:
+    name: whisper-wellness-qdrant-data
+  mongodb_data:
+    name: whisper-wellness-mongodb-data
+  mongodb_config:
+    name: whisper-wellness-mongodb-config

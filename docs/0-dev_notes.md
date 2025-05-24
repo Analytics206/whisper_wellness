@@ -3,9 +3,7 @@
 ## This document contains developer notes and reminders for ongoing work on the WhisperWell project.
 
 ## To-Do Items
-- Add optional biometric lock for native apps
 - Add optional user profile information, including name, age, gender, and location
-- Add optional mood tracking with emoji picker
 - Add optional goal tracking with progress visualization and achievement badges
 - Add optional AI-powered goal suggestions and adjustments
 - Add optional smart reminders and motivation system
