@@ -1,4 +1,34 @@
 services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+      target: development
+      args:
+        - NODE_ENV=development
+    container_name: whisper-wellness-frontend
+    restart: unless-stopped
+    ports:
+      - "3001:3001"  # Vite dev server port
+      - "9229:9229"  # For Node.js debug port
+    volumes:
+      - ./apps/frontend:/app/apps/frontend
+      - /app/node_modules
+      - /app/apps/frontend/node_modules  # Keep node_modules in sync
+    environment:
+      - NODE_ENV=development
+      - PORT=3001
+      - HOST=0.0.0.0
+      - VITE_API_URL=http://localhost:3001/api  # Example API URL
+    networks:
+      - whisper-wellness-network
+    depends_on:
+      - mongodb
+      - whisper-wellness-qdrant
+    working_dir: /app/apps/frontend
+    tty: true
+    stdin_open: true
+
   mongodb:
     image: mongo:latest
     container_name: whisper-wellness-mongodb
@@ -7,7 +37,7 @@ services:
     env_file:
       - .env
     ports:
-      - "27017:27017"
+      - "27018:27017"  # Changed from 27017 to avoid conflict
     environment:
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
@@ -40,8 +70,8 @@ services:
     container_name: whisper-wellness-qdrant
     restart: unless-stopped
     ports:
-      - "6333:6333"
-      - "6334:6334"
+      - "6335:6333"  # Changed from 6333 to 6335 to avoid conflict
+      - "6336:6334"  # Changed from 6334 to 6336 to avoid conflict
     volumes:
       - qdrant_data:/qdrant/storage
     networks:
@@ -50,6 +80,10 @@ services:
 networks:
   whisper-wellness-network:
     driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/16
 
 volumes:
   qdrant_data:

@@ -1,0 +1,74 @@
+# Base image with Node.js 20.x
+FROM node:20.11.1-alpine AS base
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies
+RUN apk add --no-cache --virtual .gyp \
+    python3 \
+    make \
+    g++ \
+    git
+
+# Development stage
+FROM base AS development
+
+# Copy package files
+COPY package*.json ./
+COPY apps/frontend/package*.json ./apps/frontend/
+
+# Install root dependencies
+RUN npm install --legacy-peer-deps
+
+# Install frontend dependencies
+WORKDIR /app/apps/frontend
+RUN npm install --legacy-peer-deps \
+    @babel/plugin-transform-react-jsx \
+    @babel/plugin-transform-runtime \
+    @babel/preset-react
+
+# Copy the rest of the application
+WORKDIR /app
+COPY . .
+
+# Expose ports (Vite default port is 5173, but we're using 3001)
+EXPOSE 3001 9229
+
+# Set working directory for runtime
+WORKDIR /app/apps/frontend
+
+# Start development server with host flag to allow external access
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "3001"]
+
+# Production stage
+FROM base AS production
+
+# Set environment to production
+ENV NODE_ENV=production
+
+# Copy package files
+COPY package*.json ./
+COPY apps/frontend/package*.json ./apps/frontend/
+
+# Install production dependencies and build the app
+WORKDIR /app
+RUN npm install --legacy-peer-deps --production
+
+WORKDIR /app/apps/frontend
+RUN npm install --legacy-peer-deps --production
+
+# Copy the rest of the application
+COPY . .
+
+# Build the app
+RUN npm run build
+
+# Install serve to run the app
+RUN npm install -g serve
+
+# Expose port
+EXPOSE 3001
+
+# Serve the built app
+CMD ["serve", "-s", "dist", "-l", "3001"]

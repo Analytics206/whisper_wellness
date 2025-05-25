@@ -97,33 +97,23 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 
 ## 🛠️ 4. Functional Requirements (Refined)
 ### Voice Implementation Phases
-
 #### 🏗️ Phase 1: Foundation (MVP)
-- User registration and (anonymous mode supported)
-- Google/Firebase authentication
-- Text chat
-- Text chat MongoDB storage
-- Text journaling
-- Text journaling MongoDB storage
-- Text memory organization with tags and search
-- Text journal vector embeddings for similarity/context recall
-- Chat vector embeddings for similarity/context recall
-- Local speech processing
+#### Phase 1: Foundation (MVP)
 - Basic voice-to-text for journal entries
 - Basic voice-to-text for chat interface
 - Basic text-to-speech for AI responses
-- Support for major languages (English, Spanish, etc.)
 
 #### 🔄 Phase 2: Enhanced Interaction
-- Full speech-to-text for chat interface
+- Cloud-based speech processing
 - Simple voice commands for app navigation
+- Full speech-to-text for chat interface
 - Expanded voice command vocabulary
 - Context-aware voice interactions
 - Improved accuracy with user-specific speech models
 - Background listening for wake words
-- Cloud-based speech processing
 
 #### ⚡ Phase 3: Advanced Features
+- Support for major languages (English, Spanish, etc.)
 - Emotion detection in voice
 - Multilingual support with auto-detection
 - Voice-based mood tracking
@@ -137,20 +127,22 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - Voice-based authentication
 - Cross-device voice synchronization
 
-### Core Features (Phase 1)
-#### 👥 User Management
+---
+
+## Core Features (Phase 1)
+### 👥 User Management
 - ✅ User registration and authentication (anonymous mode supported)
 - ✅ Biometric authentication for mobile
 - ✅ Multi-device synchronization
 
-#### 📔 Journaling & Reflection
+### 📔 Journaling & Reflection
 - ✅ Secure, encrypted journaling with optional voice input and tags
 - ✅ Journal organization with tags and search
 - ✅ Mood/emotion tracking with emoji picker (😊😢😡😴😰🤔)
 - ✅ AI-powered journaling with context-aware suggestions
 - ✅ Personal memory management
 
-#### 🤖 AI Companion
+### 🤖 AI Companion
 - ✅ Conversational AI for natural, contextual interactions
 - ✅ Speech-to-text for chat interactions with real-time transcription
 - ✅ Voice command system for app navigation and actions
@@ -159,14 +151,14 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 - ✅ Customizable interaction styles and conversation topics
 - ✅ AI-generated insights and reflections
 
-#### 🎯 Goal Management
+### 🎯 Goal Management
 - ✅ Personal goal setting and tracking system
 - ✅ Progress visualization and achievement badges
 - ✅ AI-powered goal suggestions and adjustments
 - ✅ Smart reminders and motivation system
 - ✅ Habit formation support and streak tracking
 
-#### 🔐 Data & Privacy
+### 🔐 Data & Privacy
 - ✅ End-to-end encrypted data storage
 - ✅ Vector embedding-based memory and similarity search
 - ✅ Incognito mode with opt-out data retention
@@ -339,8 +331,8 @@ WhisperWell is an AI-powered lifelong companion designed as a Progressive Web Ap
 ---
 
 ## 11. Milestones & Timeline
-- **BRD Finalization:** [Insert Date]
-- **Prototype (PWA):** [Insert Date]
+- **BRD Finalization:** 05/25/2025
+- **Prototype (PWA):** 06/14/2025
 - **AI Integration:** [Insert Date]
 - **Advisory Board Kickoff:** [Insert Date]
 - **Beta Testing:** [Insert Date]

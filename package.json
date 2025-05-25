@@ -1,0 +1,47 @@
+{
+  "name": "whisper-wellness",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "shared/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=frontend",
+    "start": "npm start --workspace=frontend",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "packageManager": "npm@10.2.4",
+  "dependencies": {
+    "react": "19.0.0-rc.0",
+    "react-dom": "19.0.0-rc.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "prettier": "^3.1.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,md}": [
+      "prettier --write"
+    ]
+  },
+  "resolutions": {
+    "react": "19.0.0-rc.0",
+    "react-dom": "19.0.0-rc.0",
+    "@testing-library/react": "^16.0.0-rc.1",
+    "@testing-library/dom": "^10.0.0",
+    "next": "canary",
+    "eslint-config-next": "canary"
+  }
+}
