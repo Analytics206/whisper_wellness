@@ -19,6 +19,8 @@ WhisperWell is built on a modern, cloud-native architecture designed for scale, 
 - **Service Framework**: Node.js 24.1.0 with NestJS 11
 - **Authentication**: Auth0 with JWT (Proprietary)
 - **API**: GraphQL (Apollo Server) & REST
+- **API Local LLM**: FastAPI Hugging Face
+- **API Online LLM**: OpenAI Whisper (Proprietary)
 - **WebSockets**: Socket.IO for real-time features
 
 ### AI/ML Services
