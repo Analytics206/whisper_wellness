@@ -25,10 +25,15 @@
       "@auth/*": ["./src/auth/*"],
       "@users/*": ["./src/users/*"],
       "@journal/*": ["./src/journal/*"],
+      "@chat/*": ["./src/chat/*"],
       "@database/*": ["./src/database/*"],
       "@common/*": ["./src/common/*"],
       "@config/*": ["./src/config/*"]
-    }
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"],
